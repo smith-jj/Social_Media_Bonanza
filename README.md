@@ -9,7 +9,9 @@ What is the relationship between news and social media? In this project will we 
 YouTube:
 
 https://www.kaggle.com/datasnaek/youtube-new - Main Data
+
 https://gist.github.com/dgp/1b24bf2961521bd75d6c - category ID's
+
 
 News Articles:
 
