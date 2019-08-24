@@ -3,14 +3,16 @@
 
 ELT Project authored by: Blake Freeman, Jill Smith, Tomeka Morrison, Trong Nguyen
 
-####What is the relationship between news and social media? In this project will we analyze news articles and YouTube posts to determine what articles earn a trending status. 
+What is the relationship between news and social media? In this project will we analyze news articles and YouTube posts to determine what articles earn a trending status. 
 
 ### Our data sources:
 YouTube:
+
 https://www.kaggle.com/datasnaek/youtube-new - Main Data
 https://gist.github.com/dgp/1b24bf2961521bd75d6c - category ID's
 
-New Artiles:
+News Articles:
+
 https://www.kaggle.com/therohk/million-headlines/downloads/million-headlines.zip/8 - Main Data
 
 ### Techincal Report
