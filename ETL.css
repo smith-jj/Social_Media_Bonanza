@@ -1,0 +1,48 @@
+a.navbar-brand{
+  color: red;
+}
+
+h3{
+  color:red;
+}
+ #mainbox{
+    width:500px;
+    height:500px; 
+    position:center;
+    margin: 65px 15px 20px;
+    border-radius: 15px;
+    background-color:white;
+    padding: 15px;
+  }
+
+  
+
+  #box2{
+    width:500px;
+    height:800px; 
+    position:center;
+    margin: 10px 15px 20px;
+    border-radius: 15px;
+    background-color:white;
+    padding: 15px;
+  }
+
+  #box3{
+    width:500px;
+    height:750px; 
+    position:center;
+    margin: 10px 15px 20px;
+    border-radius: 15px;
+    background-color:white;
+    padding: 15px;
+  }
+
+  #box5{
+    width:500px;
+    height:800px; 
+    position:center;
+    margin: 10px 15px 20px;
+    border-radius: 15px;
+    background-color:white;
+    padding: 15px;
+  }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="ETL.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+   <title>ETL Project-Social Media Bonanza</title>
+</head>
+<body style="background-color: lightgray">
+    <!--Navbar-->
+        <nav class="navbar fixed-top navbar-light bg-light">
+                <a class="navbar-brand" href="#mainbox">Social Media Bonanza</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#box3">Visualizations</a>
+                        
+                      </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#box5">Technical Report</a>
+                            <a class="dropdown-item" href="#box2">Final Report</a>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+<!--Intro-->
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-10" id="mainbox">
+                    <div class="header col-lg-12">
+                        <h3>Social Media Bonanza: YouTube vs News</h3>
+                        <hr>
+                    </div>
+                    <div class="row">
+                            <div class="img col-lg-12">
+                        <img class="rounded mx-auto d-block"  src="youtube_news.png" alt="Youtube News." width="400px" height="400px">
+                        <!---->
+                        
+                    </div>
+                 </div>
+         </div>
+        
+<!--Datasets-->
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-10" id="box2">
+                    <div class="header col-lg-12">
+                        <h3>Final Report</h3>
+                        <hr>
+                    </div>
+                    <div class="img col-lg-12">
+                        <h4>Extract</h4>
+                        <p>After brainstorming several ideas, we as a group decided that we wanted to see the relationship between news and social media. Basically, if a particular trending category in the news has any effect on a trending topic on YouTube.
+                            For this project, our main YouTube data was extracted from Trending YouTube Video Statistics on the Kaggle website. The raw data came in the form of a .csv file that was downloaded and then pulled into Pandas. We also found the most popular YouTube API video category from a user called “dgp” on GitHub Gist. <br>
+                            For our trending news headline, our second data source was pulled from A Million News Headlines on the Kaggle website. The raw data came in the form of a .csv file that was downloaded and then pulled into Pandas.
+                             </p>
+                        <h4>Transform</h4>
+                        <p>We knew that in order for our analysis work, we had to first transform the raw data from the .csv into a dataset that made sense. Using the Jupyter Notebook, we cleaned the three datasets by converting the time and date to just dates. And then from there, we filte0red out the dates that we wanted to analyze. We found that from 1/4/2018 – 05/01/2018, the dates in both the YouTube data and the News data both overlapped each other.
+                            Next, there were a few categories in the News dataset that didn’t match up with the YouTube dataset, so we recategorizes them as best as we could. For example, the category metro or metropolitan about local news became just News & Politics.
+                            The cleaned YouTube dataset and the cleaned News dataset was then combined and further transformed by dropping any columns that we thought were not needed. We also formatted some of the column headers to make the whole data frame look better.
+                            </p>
+                        <h4>Load</h4>
+                        <p>To bring everything home, we loaded our final database into MongoDB. In the Jupyter Notebook, we imported pymongo and made a connection to the MongoClient. This took us a few tries, but we finally got it to work.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <a class="full-report" href="FinalReport.pdf">Link to Full Report</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+<!--Visualizations-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10" id="box3">
+                    <div class="header col-lg-12">
+                        <h3>Visualizations</h3>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="img col-lg-6"> 
+                            <img  src="YTbar.png" class="rounded float-left"  alt="Youtube Bar chart" width="300px" height="300px" >
+                        </div>  
+                        <div class="img col-lg-6">
+                            <img  src="YTPie.png" class="rounded float-right" alt="Youtube Pie Chart"width="300px" height="300px" >
+                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="img col-lg-6">
+                          <img  src="Articlebar.png" class="rounded float-left" alt="Article Pie Chart" width="300px" height="300px">
+                        </div> 
+                        <div class="img col-lg-6">
+                            <img   src="Articlepie.png " class="rounded float-right" alt="Article Bar Chart" width="300px" height="300px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col-lg-10">
+               <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
+            </div>>-->
+        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div> 
+
+
+<!--Reports-->
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-10" id="box5">
+                    <div class="header col-lg-12">
+                        <h3>Technical Report</h3>
+                        <hr>
+                    </div>
+                    <div class="col-lg-12">
+                        <h5>Clean_News_Articles (Jupyter notebook)</h5>
+                            <ul>    
+                                <ol>Import articles csv files using pandas and create dataframes.</ol>
+                                <ol>  Files used: ArticlesJan2018, ArticlesFeb2018, ArticlesMarch2018, ArticlesApril2018</ol>
+                                <ol> Delete extraneous columns (refer to line 6)</ol>
+                                <ol> Append all four dataframes togehter to create a single dataframe</ol> 
+                                <ol>  Explore updated dataframe with function .count</ol> 
+                                <ol>Groupby New_Category to pull out all the category names and rename categories. (refer to lines 13 to 22)</ol>
+                                <ol> Saved cleaned dataframe as csv file</ol> 
+                                <ol> YouTube_Clean (Jupyter notebook)</ol> 
+                                    <br>
+                            </ul>       
+                        <h5> Import YouTube csv and Category_ID csv</h5>
+                        <ul>
+                                <ol>Use pandas to create dataframes from the csv files</ol> 
+                                <ol> Use pandas to merge the dataframes on the category_id</ol>
+                                <ol>Pull required columns from dataframe (refer to line 8)</ol>
+                                <ol>Use Datetime to update the 'trending_date' column into datetime format</ol>
+                                <ol> Update the column names (refer to line 9)</ol>
+                                <ol>Save cleaned dataframe as csv file</ol>
+                                <ol>Social_Media_Bonaza (Jupyter Notebook)</ol>
+                        </ul>
+                                 <br>
+                        <h5>Import clean YouTube_Clean and Clean_News_Artilces_v2 csv files</h5>
+                        <ul>
+                                <ol>Use pandas create dataframes from csv files</ol>
+                                <ol>Use pandas merged the dataframes on 'Category"</ol>
+                                <ol>Use JSON to convert the merged dataframe to a dictionary</ol>
+                                <ol> Use pymongo added the merged dataframe to MongoDB</ol>
+                        </ul>
+                        
+                    </div>
+        </div>
+</div>
+        </div>         
+
+       <!-- Optional theme -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+    </body>
+
+</html>
