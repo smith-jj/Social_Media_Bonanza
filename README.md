@@ -1,5 +1,7 @@
 # Social Media Bonanza
-## YouTube vs News
+## YouTube & News
+
+![](SocialMedia.gif)
 
 ELT Project authored by: Blake Freeman, Jill Smith, Tomeka Morrison, Trong Nguyen
 
@@ -17,7 +19,8 @@ News Articles:
 
 https://www.kaggle.com/therohk/million-headlines/downloads/million-headlines.zip/8 - Main Data
 
-### Techincal Report
+
+### Techincal Report (also included in Final Report document)
 Clean_News_Articles (Jupyter notebook)
 * Import articles csv files using pandas and create dataframes. 
     * Files used: ArticlesJan2018, ArticlesFeb2018, ArticlesMarch2018, ArticlesApril2018
@@ -44,8 +47,7 @@ Social_Media_Bonaza (Jupyter Notebook)
 * Use pymongo added the merged dataframe to MongoDB
 
 ### Final Report 
-We used MongoDB as out data was non-relational. 
-Using MonoDB we explored the merged dataframe to determine 
+See file, Final Report.docx
 
 
 
